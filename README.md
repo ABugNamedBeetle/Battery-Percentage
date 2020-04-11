@@ -1,4 +1,7 @@
 # Battery-Percentage
+![](images/image02.png) ![](images/image01.png)
+
+
 get battery percentage in tray icon
 Copyright 2020 a.bug.named.beetle
 
