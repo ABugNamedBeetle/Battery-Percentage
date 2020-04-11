@@ -1,5 +1,5 @@
 # Battery-Percentage
-![](images/image02.png) ![](images/image01.png)
+![](images/image02.png) ![](images/image04.png) ![](images/image03.png) ![](images/image01.png)
 
 
 get battery percentage in tray icon
