@@ -79,9 +79,10 @@ namespace BatteryPercentage
             using (bmp)
             {
                
+               IntPtr bmpPtr = bmp.GetHicon();
                 try
                 {
-                    using (Icon icon = Icon.FromHandle(bmp.GetHicon()))
+                    using (Icon icon = Icon.FromHandle(bmpPtr))
                     {
                         notifyIcon.Icon = icon;
                         notifyIcon.Text = batteryPercentage + "%";
@@ -89,10 +90,7 @@ namespace BatteryPercentage
                 }
                 finally
                 {
-                   
-                    
-                    bmp.Dispose();
-
+                    bmpPtr = IntPtr.Zero;
                 }
             }
         }
@@ -101,6 +99,7 @@ namespace BatteryPercentage
         {
             notifyIcon.Visible = false;
             notifyIcon.Dispose();
+            bmp.Dispose();
             Application.Exit();
         }
 
