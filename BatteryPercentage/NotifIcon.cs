@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace BatteryPercentage
 {
     class NotifIcon
     {
-        Bitmap bmp ;
+        Bitmap bmp = null ;
         private string batteryPercentage = null;
         private NotifyIcon notifyIcon =new NotifyIcon();
         
@@ -69,7 +69,7 @@ namespace BatteryPercentage
 
                 // Flush all graphics changes to the bitmap
                 g.Flush();
-                g.Dispose();
+                
             }
             else
             {
@@ -78,8 +78,9 @@ namespace BatteryPercentage
 
             using (bmp)
             {
-               
-               IntPtr bmpPtr = bmp.GetHicon();
+
+
+                IntPtr bmpPtr = bmp.GetHicon();
                 try
                 {
                     using (Icon icon = Icon.FromHandle(bmpPtr))
@@ -90,8 +91,10 @@ namespace BatteryPercentage
                 }
                 finally
                 {
-                    bmpPtr = IntPtr.Zero;
+                    DestroyIcon(bmpPtr);
                 }
+                        
+                
             }
         }
 
@@ -103,7 +106,8 @@ namespace BatteryPercentage
             Application.Exit();
         }
 
-       
+        [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = CharSet.Auto)]
+        extern static bool DestroyIcon(IntPtr handle);
     }
 }  
 
