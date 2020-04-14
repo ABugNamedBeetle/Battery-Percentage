@@ -5,8 +5,8 @@
 Get battery percentage in tray icon
 ## Installing
 
-* [Download the latest release](https://github.com/kas/percentage/releases)
-* Put `percentage.exe` in your startup folder
+* [Download the latest release](https://github.com/ABugNamedBeetle/Battery-Percentage/releases)
+* Put `BatteryPercentage.exe` in your startup folder
   * To get to your startup folder, press `Windows+R`, type `shell:startup`, and press enter
 
 ## Copyright
