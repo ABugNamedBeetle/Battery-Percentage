@@ -2,8 +2,14 @@
 ![](images/image02.png) ![](images/image04.png) ![](images/image03.png) ![](images/image01.png)
 
 
-get battery percentage in tray icon
+Get battery percentage in tray icon
+## Installing
 
+* [Download the latest release](https://github.com/kas/percentage/releases)
+* Put `percentage.exe` in your startup folder
+  * To get to your startup folder, press `Windows+R`, type `shell:startup`, and press enter
+
+## Copyright
 Copyright 2020 a.bug.named.beetle
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
