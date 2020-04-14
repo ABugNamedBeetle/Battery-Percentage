@@ -14,6 +14,18 @@ namespace BatteryPercentage
         [STAThread]
         static void Main()
         {
+            const string appName = "BatteryPercentage";
+            bool isAnotherInstanceOpen;
+            var mutex = new System.Threading.Mutex(true, appName, out isAnotherInstanceOpen);
+
+            if (!isAnotherInstanceOpen)
+            {
+                //app is already running! Exiting the application  
+                string message = "Only one instance of this app is allowed (App already running).";
+                string title = "BatteryPercentage";
+                MessageBox.Show(message, title);  
+                return;
+            } 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             NotifIcon trayIcon = new NotifIcon();
