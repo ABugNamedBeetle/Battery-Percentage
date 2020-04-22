@@ -13,6 +13,7 @@ namespace BatteryPercentage
         /// </summary>
         [STAThread]
         static void Main()
+
         {
             const string appName = "BatteryPercentage";
             bool isAnotherInstanceOpen;
@@ -23,6 +24,7 @@ namespace BatteryPercentage
                 //app is already running! Exiting the application  
                 string message = "Only one instance of this app is allowed (App already running).";
                 string title = "BatteryPercentage";
+               
                 MessageBox.Show(message, title);  
                 return;
             } 
