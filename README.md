@@ -1,8 +1,13 @@
 # Battery-Percentage
-![](images/image02.png) ![](images/image04.png) ![](images/image03.png) ![](images/image01.png)
+![](images/image02.png) ![](images/image04.png) ![](images/image03.png) ![](images/image01.png)![](images/image05.png)
 
 
 Get battery percentage in tray icon
+## Features
+* Get Battery percentage in System Tray.
+* Adjustable `Low Battery Level` and`Low Battery Level` .
+* New Sound Alert when battery decreases below certain level.
+  
 ## Installing
 
 * [Download the latest release](https://github.com/ABugNamedBeetle/Battery-Percentage/releases)
